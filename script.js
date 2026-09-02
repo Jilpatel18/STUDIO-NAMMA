@@ -288,6 +288,12 @@ playgroundHeading.addEventListener('mousemove', (e) => {
   })
 });
 
+playgroundHeading.addEventListener("mouseenter",(e)=>{
+  box1.classList.add("left");
+  box3.classList.add("left");
+  box2.classList.add("right");
+  box4.classList.add("right");
+})
 
 
 // let gridVedioItems=document.querySelectorAll('.grid-vedio-items');
@@ -442,3 +448,41 @@ box4.addEventListener('mousemove', (e) => {
     document.getElementById('c4').style.display='block';
   })
 });
+
+
+
+
+
+
+
+
+
+// const boxes = document.querySelectorAll(".video-grid-item");
+
+// let animationDone = false;
+
+// window.addEventListener("scroll", () => {
+
+//   if (animationDone) return;
+
+//   const grid = document.querySelector(".video-grid");
+//   const rect = grid.getBoundingClientRect();
+
+//   // Start animation when grid enters viewport
+//   if (rect.top < window.innerHeight * 0.8) {
+
+//     boxes.forEach((box, index) => {
+
+//       if (index === 0 || index === 2) {
+//         // Box 1 & 3 come from LEFT
+//         box.style.transform = "translateX(0) rotate(0deg)";
+//       } else {
+//         // Box 2 & 4 come from RIGHT
+//         box.style.transform = "translateX(0) rotate(0deg)";
+//       }
+
+//     });
+
+//     animationDone = true;
+//   }
+// });

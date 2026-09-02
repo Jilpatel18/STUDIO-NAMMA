@@ -367,4 +367,49 @@ form>div>input{
   padding: 5px;
   transform: rotate(-5deg);
   z-index: 0;
+  color: #fff;
+}
+
+/* .video-grid-item {
+  transition: transform 1s ease-out;
+}
+
+
+
+.box1,
+.box3 {
+  transform: translateX(-500px) rotate(-5deg);
+}
+
+.box2,
+.box4 {
+  transform: translateX(500px) rotate(5deg);
+} */
+
+
+.left{
+  animation-name: spin;
+  animation-duration: 2s;
+}
+.right{
+ animation-name: spin1;
+  animation-duration: 2s;
+}
+
+@keyframes spin{
+  from{
+    transform: rotateZ(-10deg);
+  }
+  to{
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes spin1{
+  from{
+    transform: rotateZ(10deg);
+  }
+  to{
+    transform: rotateZ(0deg);
+  }
 }
