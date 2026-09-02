@@ -261,7 +261,7 @@ body {
   position: absolute;
   top: -100%;
   transition: all 0.3s ease;
-  background-color: white;
+  background-color: rgb(237, 230, 229);
   overflow: hidden;
 }
 
@@ -284,19 +284,71 @@ input,
   font-weight: 800;
   color: #c9c9c9;
 }
-form{
-  gap: 10px;
-  width: 100x;
-}
 form>div{
-  display: flex;
-  align-items: center;
-  gap: 50px;
+    display: flex;
+    align-items: center;
+    gap:50px;
 }
 form>div>input{
-  width: 100%;
+    width: 100%;
 }
 .active{
   background-color: black;
-  color: white;
+  color:white;
+}
+/* TODO: Playground */
+
+#playground {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#playground-heading {
+  padding: 1rem 2rem;
+  position: relative;
+  font-size: 10rem;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: white;
+}
+
+#playground-item {
+  position: absolute;
+  font-size: 2rem;
+  top: 0px;
+  left: 0px;
+  background-color: blue;
+  border-radius: 6px;
+  padding: 5px;
+  transform: rotate(-5deg);
+}
+.video-grid {
+  position: relative;
+  height: 200vh;
+  width: 100vw;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.video-grid-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.video-grid-item img {
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+}
+
+.video-grid-item video {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 80%;
 }
