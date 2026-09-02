@@ -352,3 +352,19 @@ form>div>input{
   height: 100%;
   width: 80%;
 }
+
+.video-grid {
+  cursor: url('assets/1.webp') 10 15, auto;
+}
+
+#c1,#c2,#c3,#c4{
+  position: absolute;
+  font-size: 2rem;
+  top: 5px;
+  left: 5px;
+  background-color: blue;
+  border-radius: 6px;
+  padding: 5px;
+  transform: rotate(-5deg);
+  z-index: 0;
+}

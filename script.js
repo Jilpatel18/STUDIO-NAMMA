@@ -287,6 +287,9 @@ playgroundHeading.addEventListener('mousemove', (e) => {
     document.getElementById('playground-item').style.display='block';
   })
 });
+
+
+
 // let gridVedioItems=document.querySelectorAll('.grid-vedio-items');
 // gridVedioItems.forEach((item)=>{
 //   item.addEventListener('mouseenter',(e)=>{
@@ -299,21 +302,40 @@ playgroundHeading.addEventListener('mousemove', (e) => {
 //   });
 
 // });
-let box1 = document.querySelector(".box1")
-let img1 = document.querySelector(".img1")
-let v1 = document.querySelector(".v1")
+let box1 = document.querySelector(".box1");
+let img1 = document.querySelector(".img1");
+let v1 = document.querySelector(".v1");
+let c1 = document.getElementById("c1");
 
-box1.addEventListener("mouseenter",(e)=>{
-  img1.style.zIndex = 1
-  v1.style.zIndex = 100
-  img1.style.filter="blur(8px)"
-})
+box1.addEventListener("mouseenter", () => {
+  img1.style.zIndex = 1;
+  v1.style.zIndex = 100;
+  img1.style.filter = "blur(8px)";
+  c1.style.zIndex = 200; // Show custom cursor
+});
 
-box1.addEventListener("mouseleave",(e)=>{
-  img1.style.zIndex = 100
-  v1.style.zIndex = 1
-  img1.style.filter="blur(0px)"
-})
+box1.addEventListener("mouseleave", () => {
+  img1.style.zIndex = 100;
+  v1.style.zIndex = 1;
+  img1.style.filter = "blur(0px)";
+  c1.style.zIndex = 0; // Hide custom cursor
+});
+
+3
+box1.addEventListener('mousemove', (e) => {
+  const { offsetX, offsetY } = e;
+  console.log(`${offsetY}px`);
+
+  // FIXME: Move Item
+  document.getElementById('c1').style.top = `56px`;
+  document.getElementById('c1').style.left = `${offsetX}px`;
+  box1.addEventListener('mouseleave',(e)=>{
+    document.getElementById('c1').style.display='none';
+  });
+  box1.addEventListener('mouseenter',(e)=>{
+    document.getElementById('c1').style.display='block';
+  })
+});
 
 let box2 = document.querySelector(".box2")
 let img2 = document.querySelector(".img2")
@@ -324,6 +346,7 @@ box2.addEventListener("mouseenter",(e)=>{
   img2.style.zIndex = 1
   v2.style.zIndex = 100
   img2.style.filter="blur(8px)"
+  c2.style.zIndex = 200;
 })
 
 
@@ -331,7 +354,24 @@ box2.addEventListener("mouseleave",(e)=>{
   img2.style.zIndex = 100
   v2.style.zIndex = 1
   img2.style.filter="blur(0px)"
+  c2.style.zIndex = 0;
 })
+
+box2.addEventListener('mousemove', (e) => {
+  const { offsetX, offsetY } = e;
+  console.log(`${offsetY}px`);
+
+  // FIXME: Move Item
+  document.getElementById('c2').style.top = `56px`;
+  document.getElementById('c2').style.left = `${offsetX}px`;
+  box2.addEventListener('mouseleave',(e)=>{
+    document.getElementById('c2').style.display='none';
+  });
+  box2.addEventListener('mouseenter',(e)=>{
+    document.getElementById('c2').style.display='block';
+  })
+});
+
 
 
 let box3 = document.querySelector(".box3")
@@ -343,6 +383,7 @@ box3.addEventListener("mouseenter",(e)=>{
   img3.style.zIndex = 1
   v3.style.zIndex = 100
   img3.style.filter="blur(8px)"
+  c3.style.zIndex = 200;
 })
 
 
@@ -350,8 +391,22 @@ box3.addEventListener("mouseleave",(e)=>{
   img3.style.zIndex = 100
   v3.style.zIndex = 1
   img3.style.filter="blur(0px)"
+  c3.style.zIndex = 0;
 })
+box3.addEventListener('mousemove', (e) => {
+  const { offsetX, offsetY } = e;
+  console.log(`${offsetY}px`);
 
+  // FIXME: Move Item
+  document.getElementById('c3').style.top = `56px`;
+  document.getElementById('c3').style.left = `${offsetX}px`;
+  box3.addEventListener('mouseleave',(e)=>{
+    document.getElementById('c3').style.display='none';
+  });
+  box3.addEventListener('mouseenter',(e)=>{
+    document.getElementById('c3').style.display='block';
+  })
+});
 
 let box4 = document.querySelector(".box4")
 let img4 = document.querySelector(".img4")
@@ -362,6 +417,7 @@ box4.addEventListener("mouseenter",(e)=>{
   img4.style.zIndex = 1
   v4.style.zIndex = 100
   img4.style.filter="blur(8px)"
+  c4.style.zIndex = 200;
 })
 
 
@@ -369,4 +425,20 @@ box4.addEventListener("mouseleave",(e)=>{
   img4.style.zIndex = 100
   v4.style.zIndex = 1
   img4.style.filter="blur(0px)"
+  c4.style.zIndex = 0;
 })
+
+box4.addEventListener('mousemove', (e) => {
+  const { offsetX, offsetY } = e;
+  console.log(`${offsetY}px`);
+
+  // FIXME: Move Item
+  document.getElementById('c4').style.top = `56px`;
+  document.getElementById('c4').style.left = `${offsetX}px`;
+  box4.addEventListener('mouseleave',(e)=>{
+    document.getElementById('c4').style.display='none';
+  });
+  box4.addEventListener('mouseenter',(e)=>{
+    document.getElementById('c4').style.display='block';
+  })
+});
